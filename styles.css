@@ -1,0 +1,169 @@
+/* Genel stil ayarları */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Yüksekliği en az ekran yüksekliği kadar yapar */
+    background-color: #f5f5f5; /* Açık gri arka plan */
+}
+
+header {
+    background-color: #a2c2e1; /* Açık mavi arka plan */
+    color: #333; /* Koyu gri yazı rengi */
+    padding: 20px;
+    text-align: center;
+    margin-bottom: 20px;
+    border: 1px dotted #aaa; /* Açık gri noktalı border */
+    position: relative; /* Hamburger menü için */
+}
+
+.header-content h1 {
+    font-size: 36px;
+    margin: 0;
+}
+
+.header-content h2 {
+    font-size: 20px;
+    color: #555; /* Koyu gri alt başlık rengi */
+}
+
+.hamburger-menu {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+#menu-toggle {
+    font-size: 24px;
+    background: #007BFF; /* Açık mavi arka plan */
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.container {
+    display: flex;
+    flex: 1; /* Container'ın büyüklüğünü ayarlamak için */
+    border: 1px dotted #aaa; /* Açık gri noktalı border */
+}
+
+.main-content {
+    flex: 3;
+    margin-right: 20px;
+    padding: 20px;
+    background-color: #fff; /* Beyaz arka plan */
+    border-radius: 8px; /* Köşeleri yuvarlama */
+    border: 1px solid #ddd; /* İnce gri border */
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 300px;
+    height: 100%;
+    background-color: #f9f9f9; /* Hafif gri arka plan */
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid #ddd; /* İnce gri border */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Hafif gölge */
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+    z-index: 1000; /* Üstte görünmesini sağlar */
+}
+
+.sidebar-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Koyu yarı saydam arka plan */
+    transform: scale(0);
+    transition: transform 0.3s ease;
+    z-index: 900; /* Sidebar'dan altında kalır */
+}
+
+.sidebar.active {
+    transform: translateX(0);
+}
+
+.sidebar-overlay.active {
+    transform: scale(1);
+}
+
+.sidebar h3 {
+    font-size: 24px;
+    margin-top: 0;
+    color: #3a7bd5; /* Daha açık mavi başlık rengi */
+}
+
+.news-item {
+    margin-bottom: 20px;
+    border: 1px solid #3a7bd5; /* Daha açık mavi border */
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #fff; /* Beyaz arka plan */
+}
+
+.news-title {
+    text-decoration: none;
+    color: #3a7bd5; /* Daha açık mavi başlık rengi */
+    font-weight: bold;
+    font-size: 18px;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.news-title:hover {
+    color: #1e5aa4; /* Başlık üzerine gelindiğinde daha koyu mavi renk */
+}
+
+.news-preview {
+    font-size: 14px;
+    color: #666; /* Koyu gri metin rengi */
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+.sidebar li {
+    margin-bottom: 10px;
+}
+
+.sidebar a {
+    text-decoration: none;
+    color: #3a7bd5; /* Daha açık mavi bağlantı rengi */
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.sidebar a:hover {
+    color: #1e5aa4; /* Bağlantı üzerine gelindiğinde daha koyu mavi renk */
+}
+
+footer {
+    background-color: #a2c2e1; /* Açık mavi arka plan */
+    color: #333; /* Koyu gri yazı rengi */
+    padding: 10px;
+    text-align: center;
+    margin-top: 20px;
+    border: 1px dotted #aaa; /* Açık gri noktalı border */
+}
+
+footer a {
+    color: #333; /* Koyu gri bağlantı rengi */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer a:hover {
+    color: #1e5aa4; /* Bağlantı üzerine gelindiğinde daha koyu mavi renk */
+}

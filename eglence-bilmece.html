@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eğlence ve Bilmece Bölümü</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1>Eğlence ve Bilmece</h1>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="main-content">
+            <section id="entertainment-forum">
+                <h2>Riddle of the week!</h2>
+                <div id="disqus_thread"></div>
+                <script>
+                    var disqus_config = function () {
+                        this.page.url = window.location.href;  // Sayfanın URL'si
+                        this.page.identifier = 'entertainment-forum'; // Sayfanın benzersiz tanımlayıcısı
+                    };
+                    (function() {
+                        var d = document, s = d.createElement('script');
+                        s.src = 'https://d-gazete.disqus.com/embed.js';  // Buraya Disqus kısa adınızı koyun
+                        s.setAttribute('data-timestamp', +new Date());
+                        (d.head || d.body).appendChild(s);
+                    })();
+                </script>
+                <noscript>JavaScript'i etkinleştirmeniz gerekir.</noscript>
+            </section>
+        </div>
+    </div>
+
+    <footer>
+        <a href="archive.html">Arşiv</a>
+    </footer>
+</body>
+</html>
